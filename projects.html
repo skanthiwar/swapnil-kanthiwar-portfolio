@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+     <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    
+    <!-- Header -->
+<header class="swapnil-header navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a href="index.html" class="navbar-brand">
+      <img src="assets/images/swapnil_logo.png" alt="Swapnil Logo" height="40">
+      <span>Swapnil</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- Project Sorting Filter -->
+<section id="filter" class="filter-section">
+  <h3>Filter Projects</h3>
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="wordpress">WordPress</button>
+    <button class="filter-btn" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+  </div>
+</section>
+
+<!-- Project Cards Section -->
+<section id="projects" class="projects-section" data-aos="fade-up">
+  <div class="project-card-container">
+
+    <!-- Village Mart -->
+    <div class="project-card hover-effect" data-aos="fade-up" data-category="wordpress">
+      <img src="assets/images/villagemart.png" alt="Village Mart" class="project-img" />
+      <div class="project-info">
+        <h3 class="project-title">Village Mart (WordPress Developer)</h3>
+        <p class="project-desc">
+          Developed the villagemart.shop e-commerce website, integrating responsive design and intuitive navigation to enhance user experience.
+        </p>
+        <p class="project-desc">
+          Implemented eco-friendly product showcases to promote sustainable living and increase community engagement.
+        </p>
+        <div class="tech-stack">
+          <span>WordPress</span>
+          <span>Responsive Design</span>
+          <span>Eco-Friendly</span>
+        </div>
+        <button class="btn-modal" data-target="modal-vm">View More</button>
+      </div>
+    </div>
+
+    <!-- Axiom VIP -->
+    <div class="project-card hover-effect" data-aos="fade-up" data-category="frontend">
+      <img src="assets/images/axiomvip.jpg" alt="Axiom VIP" class="project-img" />
+      <div class="project-info">
+        <h3 class="project-title">Axiom VIP (Front-end Developer & Lead Developer)</h3>
+        <p class="project-desc">
+          Led front-end development, designing responsive landing pages using HTML, CSS, and Bootstrap.
+        </p>
+        <p class="project-desc">
+          Coordinated the development team, conducted cross-browser testing, and ensured usability across platforms.
+        </p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Bootstrap</span>
+        </div>
+        <button class="btn-modal" data-target="modal-av">View More</button>
+      </div>
+    </div>
+
+    <!-- Book Share -->
+    <div class="project-card hover-effect" data-aos="fade-up" data-category="frontend">
+      <img src="assets/images/bookshare1.jpg" alt="Book Share" class="project-img" />
+      <div class="project-info">
+        <h3 class="project-title">Book Share (Front-end Developer)</h3>
+        <p class="project-desc">
+          Created interactive and user-friendly “Donate Book” section, improving platform functionality and engagement.
+        </p>
+        <p class="project-desc">
+          Tested compatibility across multiple devices and browsers, ensuring seamless user experience.
+        </p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <button class="btn-modal" data-target="modal-bs">View More</button>
+      </div>
+    </div>
+
+    <!-- Right Choice Tailor -->
+    <div class="project-card hover-effect" data-aos="fade-up" data-category="fullstack">
+      <img src="assets/images/rightchoice.jpg" alt="Right Choice Tailor" class="project-img" />
+      <div class="project-info">
+        <h3 class="project-title">Right Choice Tailor (Full Stack Developer)</h3>
+        <p class="project-desc">
+          Developed full-stack web application using HTML, CSS, Bootstrap, JavaScript, MySQL, and PHP.
+        </p>
+        <p class="project-desc">
+          Designed responsive UI and implemented features enabling service providers to communicate with customers effectively.
+        </p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Bootstrap</span>
+          <span>JavaScript</span>
+          <span>MySQL</span>
+          <span>PHP</span>
+        </div>
+        <button class="btn-modal" data-target="modal-rc">View More</button>
+      </div>
+    </div>
+
+    <!-- Cash Calculator -->
+    <div class="project-card hover-effect" data-aos="fade-up" data-category="fullstack">
+      <img src="assets/images/cashcalculator.jpg" alt="Cash Calculator" class="project-img" />
+      <div class="project-info">
+        <h3 class="project-title">Cash Calculator (Full Stack Developer)</h3>
+        <p class="project-desc">
+          Developed full-stack web application using HTML, CSS, Bootstrap, JavaScript.
+        </p>
+        <p class="project-desc">
+          Designed responsive UI and implemented features enabling service providers to communicate with customers effectively.
+        </p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Bootstrap</span>
+          <span>JavaScript</span> 
+        </div>
+        <button class="btn-modal" data-target="modal-rc">View More</button>
+      </div>
+    </div>
+
+    <!-- Adarsh Classes -->
+    <div class="project-card hover-effect" data-aos="fade-up" data-category="fullstack">
+      <img src="assets/images/adarchclasses.jpg" alt="Adarsh Classes" class="project-img" />
+      <div class="project-info">
+        <h3 class="project-title">Adarsh Classes (Front-End Developer)</h3>
+        <p class="project-desc">
+          Developed Front-End web application using HTML, CSS, Bootstrap, JavaScript.
+        </p>
+        <p class="project-desc">
+          Designed responsive UI and implemented features enabling service providers to communicate with customers effectively.
+        </p>
+        <div class="tech-stack">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Bootstrap</span>
+          <span>JavaScript</span>
+        </div>
+        <button class="btn-modal" data-target="modal-rc">View More</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal Popups -->
+<div class="modal" id="modal-vm">
+  <div class="modal-content">
+    <span class="close-modal" data-target="modal-vm">&times;</span>
+    <h2>Village Mart - Details</h2>
+    <p>Developed the villagemart.shop e-commerce website with responsive design and intuitive navigation to enhance user experience.</p>
+    <p>Implemented eco-friendly product showcases to promote sustainable living and increase community engagement.</p>
+    <a href="https://villagemart.shop" target="_blank" class="modal-link">Live Link</a>
+  </div>
+</div>
+
+<div class="modal" id="modal-av">
+  <div class="modal-content">
+    <span class="close-modal" data-target="modal-av">&times;</span>
+    <h2>Axiom VIP - Details</h2>
+    <p>Led front-end development, designing responsive landing pages using HTML, CSS, and Bootstrap.</p>
+    <p>Coordinated the development team, conducted cross-browser testing, and ensured usability across platforms.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-bs">
+  <div class="modal-content">
+    <span class="close-modal" data-target="modal-bs">&times;</span>
+    <h2>Book Share - Details</h2>
+    <p>Created interactive and user-friendly “Donate Book” section, improving platform functionality and engagement.</p>
+    <p>Tested compatibility across multiple devices and browsers, ensuring seamless user experience.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-rc">
+  <div class="modal-content">
+    <span class="close-modal" data-target="modal-rc">&times;</span>
+    <h2>Right Choice Tailor - Details</h2>
+    <p>Developed full-stack web application using HTML, CSS, Bootstrap, JavaScript, MySQL, and PHP.</p>
+    <p>Designed responsive UI and implemented features enabling service providers to communicate with customers effectively.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-cc">
+  <div class="modal-content">
+    <span class="close-modal" data-target="modal-rc">&times;</span>
+    <h2>Cash Calculator - Details</h2>
+    <p>Developed full-stack web application using HTML, CSS, Bootstrap, JavaScript, MySQL, and PHP.</p>
+    <p>Designed responsive UI and implemented features enabling service providers to communicate with customers effectively.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-ac">
+  <div class="modal-content">
+    <span class="close-modal" data-target="modal-rc">&times;</span>
+    <h2>Adarsh Classes - Details</h2>
+    <p>Developed full-stack web application using HTML, CSS, Bootstrap, JavaScript, MySQL, and PHP.</p>
+    <p>Designed responsive UI and implemented features enabling service providers to communicate with customers effectively.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="swapnil-footer">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <p>&copy; 2025 Swapnil Kanthiwar. All rights reserved.</p>
+    <div class="footer-links">
+  <a href="mailto:skanthiwar1@gmail.com" aria-label="Email">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/swapnil-kanthiwar-648906176" target="_blank" aria-label="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="projects.html" aria-label="Projects">
+    <i class="fas fa-folder-open"></i>
+  </a>
+  <a href="https://github.com/skanthiwar" target="_blank" aria-label="GitHub">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle (includes Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
