@@ -10,6 +10,10 @@
      <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
  
 </head>
 <body>
@@ -83,55 +87,146 @@
   </div>
 </section>
 
-<!-- ===== Projects Section ===== -->
-<section class="projects section" id="projects">
-  <div class="container">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="project-grid">
-      <div class="project-card fade-in">
-        <h3>Cash Calculator</h3>
-        <p>A responsive web app for instant denomination-based cash calculations.</p>
-        <button class="view-project-btn" data-modal="modal1" aria-label="View Cash Calculator Project">View Project</button>
-      </div>
-      <div class="project-card fade-in">
-        <h3>Village Mart</h3>
-        <p>E-commerce platform empowering rural vendors with smooth UX.</p>  
-        <button class="view-project-btn" data-modal="modal2" aria-label="View Village Mart Project">View Project</button>
-      </div>
-      <div class="project-card fade-in">
-        <h3>Axiom VIP</h3>
-        <p>Lead nurturing system integrated with GHL for seamless client onboarding.</p>
-        <button class="view-project-btn" data-modal="modal3" aria-label="View Axiom VIP Project">View Project</button>
-      </div>
-    </div>
-  </div>
 
-  <!-- ===== Project Modals ===== -->
-  <div class="modal" id="modal1" role="dialog" aria-modal="true" aria-labelledby="modal1Title">
-    <div class="modal-content">
-      <button class="close-btn" aria-label="Close">&times;</button>
-      <h3 id="modal1Title">Cash Calculator</h3>
-      <a href="https://cash-calculator-demo.netlify.app/" target="_blank" rel="noopener">Live Demo</a>
-      <a href="https://github.com/swapnilkanthiwar/cash-calculator" target="_blank" rel="noopener">GitHub Repo</a>
+<!-- Project Section -->
+<section id="projects" class="container mt-5">
+  <h2 class="text-center mb-4">Featured Projects</h2>
+
+  <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center">
+          <div class="project-card">
+            <h3>Village Mart</h3>
+            <p>Empowering rural vendors with smooth UX.</p>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal1">View Project</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="project-card">
+            <h3>Axiom VIP</h3>
+            <p>Lead nurturing system with GHL integration.</p>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal2">View Project</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="project-card">
+            <h3>Book Share</h3>
+            <p>Platform to share and borrow books seamlessly.</p>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal3">View Project</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="project-card">
+            <h3>Right Choice Tailor</h3>
+            <p>Smart tailoring service with personalized fittings.</p>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal4">View Project</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="project-card">
+            <h3>Cash Calculator</h3>
+            <p>Responsive web app for cash calculations.</p>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal5">View Project</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <div class="project-card">
+            <h3>Adarsh Classes</h3>
+            <p>Online education platform for excellence.</p>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal6">View Project</button>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-  <div class="modal" id="modal2" role="dialog" aria-modal="true" aria-labelledby="modal2Title">
-    <div class="modal-content">
-      <button class="close-btn" aria-label="Close">&times;</button>
-      <h3 id="modal2Title">Village Mart</h3>
-      <a href="https://village-mart-demo.netlify.app/" target="_blank" rel="noopener">Live Demo</a>
-      <a href="https://github.com/swapnilkanthiwar/village-mart" target="_blank" rel="noopener">GitHub Repo</a>
-    </div>
-  </div>
-  <div class="modal" id="modal3" role="dialog" aria-modal="true" aria-labelledby="modal3Title">
-    <div class="modal-content">
-      <button class="close-btn" aria-label="Close">&times;</button>
-      <h3 id="modal3Title">Axiom VIP</h3>
-      <a href="https://axiom-vip-demo.netlify.app/" target="_blank" rel="noopener">Live Demo</a>
-      <a href="https://github.com/swapnilkanthiwar/axiom-vip" target="_blank" rel="noopener">GitHub Repo</a>
-    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
   </div>
 </section>
+
+<!-- Modals (1 to 6) -->
+<div class="modal fade" id="modal1" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <h3>Village Mart</h3>
+      <a href="https://village-mart-demo.netlify.app/" target="_blank">Live Demo</a>
+      <a href="https://github.com/swapnilkanthiwar/village-mart" target="_blank">GitHub</a>
+      <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal2" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <h3>Axiom VIP</h3>
+      <a href="https://axiom-vip-demo.netlify.app/" target="_blank">Live Demo</a>
+      <a href="https://github.com/swapnilkanthiwar/axiom-vip" target="_blank">GitHub</a>
+      <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal3" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <h3>Book Share</h3>
+      <a href="https://book-share-demo.netlify.app/" target="_blank">Live Demo</a>
+      <a href="https://github.com/swapnilkanthiwar/book-share" target="_blank">GitHub</a>
+      <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal4" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <h3>Right Choice Tailor</h3>
+      <a href="https://right-choice-tailor-demo.netlify.app/" target="_blank">Live Demo</a>
+      <a href="https://github.com/swapnilkanthiwar/right-choice-tailor" target="_blank">GitHub</a>
+      <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal5" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <h3>Cash Calculator</h3>
+      <a href="https://cash-calculator-demo.netlify.app/" target="_blank">Live Demo</a>
+      <a href="https://github.com/swapnilkanthiwar/cash-calculator" target="_blank">GitHub</a>
+      <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal6" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-3">
+      <h3>Adarsh Classes</h3>
+      <a href="https://adarsh-classes-demo.netlify.app/" target="_blank">Live Demo</a>
+      <a href="https://github.com/swapnilkanthiwar/adarsh-classes" target="_blank">GitHub</a>
+      <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
 
 <!-- ===== Testimonials Section ===== -->
 <section class="section testimonials fade-in" id="testimonials">
