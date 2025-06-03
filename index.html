@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
 
-    <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
  
 </head>
@@ -87,146 +85,153 @@
   </div>
 </section>
 
+<!-- Featured Projects -->
+<section id="proj-section" class="proj-container mt-5">
+  <h2 class="section-title text-center mb-4">Featured Projects</h2>
 
-<!-- Project Section -->
-<section id="projects" class="container mt-5">
-  <h2 class="text-center mb-4">Featured Projects</h2>
-
-  <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="projCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
 
       <div class="carousel-item active">
         <div class="d-flex justify-content-center">
-          <div class="project-card">
+          <div class="proj-card">
             <h3>Village Mart</h3>
             <p>Empowering rural vendors with smooth UX.</p>
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal1">View Project</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#proj-modal1">View Project</button>
           </div>
         </div>
       </div>
 
       <div class="carousel-item">
         <div class="d-flex justify-content-center">
-          <div class="project-card">
+          <div class="proj-card">
             <h3>Axiom VIP</h3>
             <p>Lead nurturing system with GHL integration.</p>
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal2">View Project</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#proj-modal2">View Project</button>
           </div>
         </div>
       </div>
 
       <div class="carousel-item">
         <div class="d-flex justify-content-center">
-          <div class="project-card">
+          <div class="proj-card">
             <h3>Book Share</h3>
             <p>Platform to share and borrow books seamlessly.</p>
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal3">View Project</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#proj-modal3">View Project</button>
           </div>
         </div>
       </div>
 
       <div class="carousel-item">
         <div class="d-flex justify-content-center">
-          <div class="project-card">
+          <div class="proj-card">
             <h3>Right Choice Tailor</h3>
             <p>Smart tailoring service with personalized fittings.</p>
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal4">View Project</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#proj-modal4">View Project</button>
           </div>
         </div>
       </div>
 
       <div class="carousel-item">
         <div class="d-flex justify-content-center">
-          <div class="project-card">
+          <div class="proj-card">
             <h3>Cash Calculator</h3>
             <p>Responsive web app for cash calculations.</p>
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal5">View Project</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#proj-modal5">View Project</button>
           </div>
         </div>
       </div>
 
       <div class="carousel-item">
         <div class="d-flex justify-content-center">
-          <div class="project-card">
+          <div class="proj-card">
             <h3>Adarsh Classes</h3>
             <p>Online education platform for excellence.</p>
-            <button class="btn" data-bs-toggle="modal" data-bs-target="#modal6">View Project</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#proj-modal6">View Project</button>
           </div>
         </div>
       </div>
 
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#projCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#projCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
     </button>
   </div>
 </section>
 
 <!-- Modals (1 to 6) -->
-<div class="modal fade" id="modal1" tabindex="-1">
+<div class="modal fade" id="proj-modal1" tabindex="-1" aria-labelledby="proj-modal1-label" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-3">
-      <h3>Village Mart</h3>
-      <a href="https://village-mart-demo.netlify.app/" target="_blank">Live Demo</a>
-      <a href="https://github.com/swapnilkanthiwar/village-mart" target="_blank">GitHub</a>
+      <h3 id="proj-modal1-label">Village Mart</h3>
+      <a href="https://village-mart-demo.netlify.app/" target="_blank" rel="noopener">Live Demo</a><br />
+      <a href="https://github.com/swapnilkanthiwar/village-mart" target="_blank" rel="noopener">GitHub</a>
       <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
 </div>
-<div class="modal fade" id="modal2" tabindex="-1">
+
+<div class="modal fade" id="proj-modal2" tabindex="-1" aria-labelledby="proj-modal2-label" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-3">
-      <h3>Axiom VIP</h3>
-      <a href="https://axiom-vip-demo.netlify.app/" target="_blank">Live Demo</a>
-      <a href="https://github.com/swapnilkanthiwar/axiom-vip" target="_blank">GitHub</a>
+      <h3 id="proj-modal2-label">Axiom VIP</h3>
+      <a href="https://axiom-vip-demo.netlify.app/" target="_blank" rel="noopener">Live Demo</a><br />
+      <a href="https://github.com/swapnilkanthiwar/axiom-vip" target="_blank" rel="noopener">GitHub</a>
       <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
 </div>
-<div class="modal fade" id="modal3" tabindex="-1">
+
+<div class="modal fade" id="proj-modal3" tabindex="-1" aria-labelledby="proj-modal3-label" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-3">
-      <h3>Book Share</h3>
-      <a href="https://book-share-demo.netlify.app/" target="_blank">Live Demo</a>
-      <a href="https://github.com/swapnilkanthiwar/book-share" target="_blank">GitHub</a>
+      <h3 id="proj-modal3-label">Book Share</h3>
+      <a href="https://book-share-demo.netlify.app/" target="_blank" rel="noopener">Live Demo</a><br />
+      <a href="https://github.com/swapnilkanthiwar/book-share" target="_blank" rel="noopener">GitHub</a>
       <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
 </div>
-<div class="modal fade" id="modal4" tabindex="-1">
+
+<div class="modal fade" id="proj-modal4" tabindex="-1" aria-labelledby="proj-modal4-label" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-3">
-      <h3>Right Choice Tailor</h3>
-      <a href="https://right-choice-tailor-demo.netlify.app/" target="_blank">Live Demo</a>
-      <a href="https://github.com/swapnilkanthiwar/right-choice-tailor" target="_blank">GitHub</a>
+      <h3 id="proj-modal4-label">Right Choice Tailor</h3>
+      <a href="https://right-choice-tailor-demo.netlify.app/" target="_blank" rel="noopener">Live Demo</a><br />
+      <a href="https://github.com/swapnilkanthiwar/right-choice-tailor" target="_blank" rel="noopener">GitHub</a>
       <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
 </div>
-<div class="modal fade" id="modal5" tabindex="-1">
+
+<div class="modal fade" id="proj-modal5" tabindex="-1" aria-labelledby="proj-modal5-label" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-3">
-      <h3>Cash Calculator</h3>
-      <a href="https://cash-calculator-demo.netlify.app/" target="_blank">Live Demo</a>
-      <a href="https://github.com/swapnilkanthiwar/cash-calculator" target="_blank">GitHub</a>
+      <h3 id="proj-modal5-label">Cash Calculator</h3>
+      <a href="https://cash-calculator-demo.netlify.app/" target="_blank" rel="noopener">Live Demo</a><br />
+      <a href="https://github.com/swapnilkanthiwar/cash-calculator" target="_blank" rel="noopener">GitHub</a>
       <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
 </div>
-<div class="modal fade" id="modal6" tabindex="-1">
+
+<div class="modal fade" id="proj-modal6" tabindex="-1" aria-labelledby="proj-modal6-label" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-3">
-      <h3>Adarsh Classes</h3>
-      <a href="https://adarsh-classes-demo.netlify.app/" target="_blank">Live Demo</a>
-      <a href="https://github.com/swapnilkanthiwar/adarsh-classes" target="_blank">GitHub</a>
+      <h3 id="proj-modal6-label">Adarsh Classes</h3>
+      <a href="https://adarsh-classes-demo.netlify.app/" target="_blank" rel="noopener">Live Demo</a><br />
+      <a href="https://github.com/swapnilkanthiwar/adarsh-classes" target="_blank" rel="noopener">GitHub</a>
       <button class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
 </div>
+
 
 <!-- ===== Testimonials Section ===== -->
 <section class="section testimonials fade-in" id="testimonials">
@@ -273,6 +278,8 @@
 
 <!-- Bootstrap JS Bundle (includes Popper.js) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
 </body>
 </html>

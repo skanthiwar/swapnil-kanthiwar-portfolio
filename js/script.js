@@ -41,25 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Project section Modal
-document.querySelectorAll('.view-project-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const modalId = btn.getAttribute('data-modal');
-    document.getElementById(modalId).classList.add('show');
-  });
-});
-
-document.querySelectorAll('.close-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.closest('.modal').classList.remove('show');
-  });
-});
-
-window.addEventListener('click', e => {
-  if (e.target.classList.contains('modal')) {
-    e.target.classList.remove('show');
-  }
-});
+// Featured Project
 
 
 // Projects Page
