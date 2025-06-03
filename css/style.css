@@ -486,6 +486,84 @@ body {
   }
 }
 
+/* Modal Content */
+.modal-content {
+  background: rgba(255, 255, 255, 0.1) !important; /* translucent white */
+  border-radius: 12px !important;
+  color: #fff !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7) !important;
+  padding: 2rem !important;
+  border: none !important;
+}
+
+/* Modal Header (h3) */
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Modal links */
+.modal-content a {
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-weight: 600;
+  color: #00ffd5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.modal-content a:hover {
+  color: #e6b800;
+  text-decoration: underline;
+}
+
+/* Close button */
+.modal-content .btn-secondary {
+  background-color: #00ffd5;
+  color: #0f2027;
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content .btn-secondary:hover {
+  background-color: #e6b800;
+  color: #0f2027;
+}
+
+/* Modal dialog centering & max width */
+.modal-dialog {
+  max-width: 600px;
+  margin: 1.75rem auto; /* default Bootstrap */
+}
+
+/* Modal fade backdrop customization */
+.modal-backdrop.show {
+  background-color: rgba(15, 32, 39, 0.85) !important; /* dark overlay */
+}
+
+/* Responsive text and padding */
+@media (max-width: 575.98px) {
+  .modal-content {
+    padding: 1.5rem !important;
+  }
+  .modal-content h3 {
+    font-size: 1.5rem;
+  }
+  .modal-content a {
+    font-size: 1rem;
+  }
+  .modal-content .btn-secondary {
+    width: 100%;
+  }
+}
+
 
 /* ==== Testimonials Section ==== */
 .testimonials-grid {
