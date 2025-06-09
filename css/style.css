@@ -377,39 +377,52 @@ body {
   }
 }
 
-/* Featured Projects Section */
-/* ==== Featured Projects Container ==== */
-.proj-container {
-  max-width: 1200px;
-  margin: 0 auto 4rem;
-  padding: 0 1rem;
+/* ==== Featured Projects Section Grid ==== */
+.featured-projects-container {
+  padding: 4rem 1rem;
+  background: #0f2027;
+  color: #fff;
 }
 
-/* ==== Project Card Styles ==== */
-.proj-card {
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #00ffd5;
+}
+
+/* ==== Project Grid ==== */
+.featured-projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* ==== Project Boxes ==== */
+.featured-projects-grid > div {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 2rem;
   width: 280px;
   color: #fff;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
 }
 
-.proj-card:hover {
+.featured-projects-grid > div:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.5);
 }
 
-.proj-card h3 {
+.featured-projects-grid h3 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
   color: #ffffff;
 }
 
-.proj-card p {
+.featured-projects-grid p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.4;
@@ -417,7 +430,7 @@ body {
 }
 
 /* ==== Buttons ==== */
-.proj-card .btn {
+.featured-projects-grid button {
   background-color: #00ffd5;
   color: #0f2027;
   font-weight: 600;
@@ -426,140 +439,145 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  /* box-shadow: 0 4px 8px rgba(255,204,0,0.5); */
+  font-size: 1rem;
 }
 
-.proj-card .btn:hover {
+.featured-projects-grid button:hover {
   background-color: #e6b800;
-  /* box-shadow: 0 6px 14px rgba(230,184,0,0.7); */
 }
 
-/* ==== Carousel item container ==== */
-.carousel-item > .d-flex {
-  justify-content: center;
-  padding: 1rem 0;
+/* ==== Modal / Popup Custom Styling ==== */
+.popup-project {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 32, 39, 0.85); /* Dark glass backdrop */
+  overflow: auto;
+  animation: fadeIn 0.3s ease-in-out;
+  padding: 1rem; /* Added padding for smaller devices */
+  box-sizing: border-box;
 }
 
-/* ==== Responsive ==== */
-
-/* Tablet (768px and up) */
-@media (min-width: 768px) {
-  .proj-card {
-    width: 320px;
-    padding: 2.5rem;
-  }
-  .proj-card h3 {
-    font-size: 1.75rem;
-  }
-  .proj-card p {
-    font-size: 1.1rem;
-  }
+/* ==== Popup content box ==== */
+.popup-content {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10% auto;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  max-width: 500px;
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  position: relative;
+  animation: slideUp 0.4s ease-out;
+  text-align: center;
 }
 
-/* Desktop (992px and up) */
-@media (min-width: 992px) {
-  .proj-card {
-    width: 350px;
-  }
-  .proj-card h3 {
-    font-size: 2rem;
-  }
-  .proj-card p {
-    font-size: 1.2rem;
-  }
+/* ==== Close Button (X) ==== */
+.popup-content span[class^="popup-close"] {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s ease;
 }
 
-/* Mobile adjustments */
-@media (max-width: 575.98px) {
-  .proj-card {
-    width: 90vw;
-    padding: 1.5rem;
-  }
-  .proj-card h3 {
-    font-size: 1.3rem;
-  }
-  .proj-card p {
-    font-size: 0.95rem;
-  }
-  .proj-card .btn {
-    width: 100%;
-  }
+.popup-content span[class^="popup-close"]:hover {
+  color: #e6b800;
 }
 
-/* Modal Content */
-.modal-content {
-  background: rgba(255, 255, 255, 0.1) !important; /* translucent white */
-  border-radius: 12px !important;
-  color: #fff !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7) !important;
-  padding: 2rem !important;
-  border: none !important;
-}
-
-/* Modal Header (h3) */
-.modal-content h3 {
+/* ==== Modal Headings ==== */
+.popup-content h3 {
   margin-top: 0;
   font-size: 2rem;
   font-weight: 700;
-  color: #fff;
-}
-
-/* Modal links */
-.modal-content a {
-  display: inline-block;
-  margin: 0.5rem 0;
-  font-weight: 600;
   color: #00ffd5;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  margin-bottom: 1rem;
 }
 
-.modal-content a:hover {
-  color: #e6b800;
-  text-decoration: underline;
+/* ==== Modal Description ==== */
+.popup-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+  line-height: 1.5;
 }
 
-/* Close button */
-.modal-content .btn-secondary {
+/* ==== Modal Live Demo Button ==== */
+.popup-content .btn {
   background-color: #00ffd5;
   color: #0f2027;
-  border: none;
   font-weight: 600;
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 2rem;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
-  margin-top: 1rem;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 255, 213, 0.3);
 }
 
-.modal-content .btn-secondary:hover {
+.popup-content .btn:hover {
   background-color: #e6b800;
+  box-shadow: 0 6px 14px rgba(230, 184, 0, 0.5);
   color: #0f2027;
 }
 
-/* Modal dialog centering & max width */
-.modal-dialog {
-  max-width: 600px;
-  margin: 1.75rem auto; /* default Bootstrap */
+/* ==== Animations ==== */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
 }
 
-/* Modal fade backdrop customization */
-.modal-backdrop.show {
-  background-color: rgba(15, 32, 39, 0.85) !important; /* dark overlay */
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
-/* Responsive text and padding */
-@media (max-width: 575.98px) {
-  .modal-content {
-    padding: 1.5rem !important;
+/* ==== Responsive Styles ==== */
+
+/* Tablets */
+@media (max-width: 991px) {
+  .popup-content {
+    margin: 20% auto;
+    padding: 1.5rem 2rem;
   }
-  .modal-content h3 {
+  .popup-content h3 {
     font-size: 1.5rem;
   }
-  .modal-content a {
+  .featured-projects-grid > div {
+    width: 90%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .popup-content {
+    width: 90%;
+    margin: 30% auto;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .popup-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .popup-content p {
     font-size: 1rem;
   }
-  .modal-content .btn-secondary {
+
+  .featured-projects-grid > div {
+    width: 90vw;
+    padding: 1.5rem;
+  }
+
+  .featured-projects-grid button {
     width: 100%;
   }
 }
