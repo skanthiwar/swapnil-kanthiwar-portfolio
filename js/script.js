@@ -73,7 +73,8 @@ const modals = [
 // Projects Page
 // Modal Logic
 document.querySelectorAll('.btn-modal').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const target = btn.getAttribute('data-target');
         const modal = document.getElementById(target);
         if (modal) modal.style.display = 'flex';
@@ -81,7 +82,8 @@ document.querySelectorAll('.btn-modal').forEach(btn => {
 });
 
 document.querySelectorAll('.close-modal').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const target = btn.getAttribute('data-target');
         const modal = document.getElementById(target);
         if (modal) modal.style.display = 'none';
