@@ -1,3 +1,5 @@
+// Nav toggle
+
 document.addEventListener("DOMContentLoaded", () => {
     const navbarCollapse = document.getElementById("navbarNav");
     const navbarToggler = document.querySelector(".navbar-toggler");
@@ -40,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
 
 // Featured Project
 const modals = [
