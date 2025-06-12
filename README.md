@@ -70,7 +70,6 @@ My portfolio design reflects current web aesthetics focused on both beauty and u
 ## ✅ What’s Already Built
 
 🧩 **Project Filtering:** Users can explore projects by categories like Front-End, Full Stack, and WordPress.  
-🌗 **Dark Mode:** Built-in toggle with animation & theme persistence (coming soon update).  
 📦 **Modular Design:** Easily scalable and maintainable file structure.
 
 ---
