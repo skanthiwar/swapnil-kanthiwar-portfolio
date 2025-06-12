@@ -180,17 +180,17 @@
 <!-- Modal Popups -->
 <div class="modal" id="modal-vm">
   <div class="modal-content">
-    <span class="close-modal" data-target="modal-vm">&times;</span>
+    <button class="close-modal" data-target="modal-vm" aria-label="Close modal">&times;</button>
     <h2>Village Mart - Details</h2>
     <p>Developed the villagemart.shop e-commerce website with responsive design and intuitive navigation to enhance user experience.</p>
     <p>Implemented eco-friendly product showcases to promote sustainable living and increase community engagement.</p>
-    <a href="https://villagemart.shop" target="_blank" class="modal-link">Live Link</a>
+    <a href="https://villagemart.shop" target="_blank" rel="noopener" class="modal-link">Live Link</a>
   </div>
 </div>
 
 <div class="modal" id="modal-av">
   <div class="modal-content">
-    <span class="close-modal" data-target="modal-av">&times;</span>
+    <button class="close-modal" data-target="modal-av" aria-label="Close modal">&times;</button>
     <h2>Axiom VIP - Details</h2>
     <p>Led front-end development, designing responsive landing pages using HTML, CSS, and Bootstrap.</p>
     <p>Coordinated the development team, conducted cross-browser testing, and ensured usability across platforms.</p>
@@ -199,7 +199,7 @@
 
 <div class="modal" id="modal-bs">
   <div class="modal-content">
-    <span class="close-modal" data-target="modal-bs">&times;</span>
+    <button class="close-modal" data-target="modal-bs" aria-label="Close modal">&times;</button>
     <h2>Book Share - Details</h2>
     <p>Created interactive and user-friendly “Donate Book” section, improving platform functionality and engagement.</p>
     <p>Tested compatibility across multiple devices and browsers, ensuring seamless user experience.</p>
@@ -208,7 +208,7 @@
 
 <div class="modal" id="modal-rc">
   <div class="modal-content">
-    <span class="close-modal" data-target="modal-rc">&times;</span>
+    <button class="close-modal" data-target="modal-rc" aria-label="Close modal">&times;</button>
     <h2>Right Choice Tailor - Details</h2>
     <p>Developed full-stack web application using HTML, CSS, Bootstrap, JavaScript, MySQL, and PHP.</p>
     <p>Designed responsive UI and implemented features enabling service providers to communicate with customers effectively.</p>
@@ -217,7 +217,7 @@
 
 <div class="modal" id="modal-cc">
   <div class="modal-content">
-    <span class="close-modal" data-target="modal-rc">&times;</span>
+    <button class="close-modal" data-target="modal-cc" aria-label="Close modal">&times;</button>
     <h2>Cash Calculator - Details</h2>
     <p>Developed full-stack web application using HTML, CSS, Bootstrap, JavaScript, MySQL, and PHP.</p>
     <p>Designed responsive UI and implemented features enabling service providers to communicate with customers effectively.</p>
@@ -226,7 +226,7 @@
 
 <div class="modal" id="modal-ac">
   <div class="modal-content">
-    <span class="close-modal" data-target="modal-rc">&times;</span>
+    <button class="close-modal" data-target="modal-ac" aria-label="Close modal">&times;</button>
     <h2>Adarsh Classes - Details</h2>
     <p>Developed full-stack web application using HTML, CSS, Bootstrap, JavaScript, MySQL, and PHP.</p>
     <p>Designed responsive UI and implemented features enabling service providers to communicate with customers effectively.</p>
@@ -256,6 +256,56 @@
 
 <!-- Bootstrap JS Bundle (includes Popper.js) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Filter Logic for Projects
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      projectCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+
+
+// Modal Logic
+document.querySelectorAll('.btn-modal').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const target = btn.getAttribute('data-target');
+        const modal = document.getElementById(target);
+        if (modal) modal.style.display = 'flex';
+    });
+});
+
+document.querySelectorAll('.close-modal').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const target = btn.getAttribute('data-target');
+        const modal = document.getElementById(target);
+        if (modal) modal.style.display = 'none';
+    });
+});
+
+window.addEventListener('click', e => {
+    if (e.target.classList.contains('modal')) {
+        e.target.style.display = 'none';
+    }
+});
+</script>
 
 </body>
 </html>
