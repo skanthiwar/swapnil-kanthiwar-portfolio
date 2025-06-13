@@ -1825,78 +1825,50 @@ body {
 
 /* Contact Form */
 
-#contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  text-align: left;
-  max-width: 480px;
-  margin: 0 auto 38px;
+.contact-form-wrapper {
   background: rgba(255,255,255,0.10);
   border-radius: 12px;
   padding: 2rem 1.2rem;
   box-shadow: 0 2px 8px #00ffd533;
   backdrop-filter: blur(6px);
+  max-width: 520px;
+  margin: 0 auto 38px;
+  text-align: left;
+  border: 1.8px solid #00ffd5;
 }
 
-#contact-form label {
-  font-weight: 600;
-  font-size: 1rem;
+.contact-form-wrapper h2 {
   color: #00ffd5;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
   text-shadow: 0 1px 2px #00ffd522;
-  margin-bottom: 0.3rem;
+  font-weight: 700;
 }
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
-  padding: 12px 15px;
+.form-description {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #e0f7fa;
+  margin-bottom: 1.2rem;
+}
+
+.form-iframe-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px #00ffd522;
   background: #0f2027;
   border: 1.8px solid #00ffd5;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-family: inherit;
-  color: #e0f7fa;
-  transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
-  resize: vertical;
-  box-shadow: 0 1px 4px #00ffd522;
+  /* Optionally add a subtle gradient for extra effect */
+  /* background: linear-gradient(135deg, #0f2027 60%, #203a43 100%); */
 }
-
-#contact-form input[type="text"]:focus,
-#contact-form input[type="email"]:focus,
-#contact-form textarea:focus {
-  outline: none;
-  border-color: #6a82fb;
-  background: #203a43;
-  box-shadow: 0 0 8px #6a82fb99;
-}
-
-#contact-form textarea {
-  min-height: 120px;
-  border-radius: 10px;
-}
-
-.btn-submit {
-  width: 180px;
-  align-self: center;
-  padding: 12px 0;
-  background: linear-gradient(90deg, #00ffd5 60%, #6a82fb 100%);
-  color: #181a20;
-  font-weight: 700;
-  font-size: 1.1rem;
+.form-iframe-container iframe {
+  display: block;
+  width: 100%;
+  min-height: 900px;
   border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px #00ffd533;
-  transition: background 0.3s, box-shadow 0.3s, color 0.3s, transform 0.2s;
+  background: transparent;
 }
 
-.btn-submit:hover {
-  background: #00ffd5;
-  color: #181a20;
-  box-shadow: 0 4px 16px #00ffd555;
-  transform: scale(1.06) translateY(-2px);
-}
 
 /* Contact Details Section */
 
