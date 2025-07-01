@@ -5,43 +5,51 @@ document.addEventListener("DOMContentLoaded", () => {
     const navbarToggler = document.querySelector(".navbar-toggler");
     const navLinks = document.querySelectorAll(".swapnil-header .nav-link");
 
-    // Close menu when a nav link is clicked
+    // Toggle navbar on toggler click
+    navbarToggler.addEventListener("click", () => {
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+      if (navbarCollapse.classList.contains("show")) {
+        bsCollapse.hide();
+      } else {
+        bsCollapse.show();
+        navbarCollapse.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+
+    // Close on nav-link click
     navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            if (navbarCollapse.classList.contains("show")) {
-                bootstrap.Collapse.getInstance(navbarCollapse)?.hide();
-            }
-        });
-    });
-
-    // Close menu when clicking outside the menu
-    document.addEventListener("click", (e) => {
-        if (
-            navbarCollapse.classList.contains("show") &&
-            !navbarCollapse.contains(e.target) &&
-            !navbarToggler.contains(e.target)
-        ) {
-            bootstrap.Collapse.getInstance(navbarCollapse)?.hide();
-        }
-    });
-
-    // Close menu on scroll
-    window.addEventListener("scroll", () => {
+      link.addEventListener("click", () => {
         if (navbarCollapse.classList.contains("show")) {
-            bootstrap.Collapse.getInstance(navbarCollapse)?.hide();
+          bootstrap.Collapse.getInstance(navbarCollapse)?.hide();
         }
-
-        // Optional: Smooth header shadow on scroll
-        const header = document.querySelector(".swapnil-header");
-        if (header) {
-            if (window.scrollY > 10) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
-            }
-        }
+      });
     });
-});
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        navbarCollapse.classList.contains("show") &&
+        !navbarCollapse.contains(e.target) &&
+        !navbarToggler.contains(e.target)
+      ) {
+        bootstrap.Collapse.getInstance(navbarCollapse)?.hide();
+      }
+    });
+
+    // Close on scroll + apply header shadow
+    window.addEventListener("scroll", () => {
+      if (navbarCollapse.classList.contains("show")) {
+        bootstrap.Collapse.getInstance(navbarCollapse)?.hide();
+      }
+
+      const header = document.querySelector(".swapnil-header");
+      if (window.scrollY > 10) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  });
 
 
 // Featured Project
