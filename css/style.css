@@ -1,9 +1,8 @@
-/* ========================= */
-/* Swapnil 2025 Sticky Header */
-/* ========================= */
+/* ----------------------------- */
+/* Header: Swapnil 2025 Navbar   */
+/* ----------------------------- */
+
 .swapnil-header {
-  background: linear-gradient(135deg, #141E30, #243B55, #0f2027);
-  border-bottom: 3px solid #00ffd5;
   position: fixed;
   top: 0;
   width: 100%;
@@ -28,12 +27,34 @@
   align-items: center;
   gap: 10px;
   text-shadow: 0 0 10px rgba(0, 255, 213, 0.6);
+  transition: all 0.4s ease;
 }
 
 .swapnil-header .navbar-brand:hover {
   transform: scale(1.1);
   color: #00ffd5;
   text-shadow: 0 0 15px rgba(0, 255, 213, 1);
+}
+
+.swapnil-header .navbar-toggler {
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.swapnil-header .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.swapnil-header .navbar-collapse {
+  position: relative;
+  z-index: 1051;
+}
+
+.swapnil-header .navbar-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 .swapnil-header .navbar-nav .nav-link {
@@ -52,17 +73,6 @@
   transform: translateY(-2px);
 }
 
-.swapnil-header .navbar-toggler {
-  border: none;
-  color: #fff;
-  font-size: 1.4rem;
-}
-
-.swapnil-header .navbar-collapse {
-  position: relative;
-  z-index: 1051;
-}
-
 @media (max-width: 991px) {
   .swapnil-header .navbar-collapse {
     /* background-color: rgba(15, 32, 39, 0.97); */
@@ -79,7 +89,22 @@
   .swapnil-header .navbar-nav .nav-link {
     width: 100%;
     padding: 10px 1rem;
+    font-size: 1rem;
     text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .swapnil-header {
+    padding: 12px 20px;
+  }
+
+  .swapnil-header .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .swapnil-header .navbar-nav .nav-link {
+    padding: 8px 12px;
   }
 }
 
@@ -88,7 +113,7 @@
     padding: 10px 15px;
   }
 
-  .swapnil-header .navbar-brand span {
+  .swapnil-header .navbar-brand {
     font-size: 1.2rem;
   }
 
@@ -209,7 +234,7 @@ body {
   background: linear-gradient(135deg, #181a20 0%, #232526 40%, #2c5364 100%);
   color: #f4f4f4;
   margin: 0;
-  padding: 0;
+  padding-top: 80px !important;
   overflow-x: hidden;
   min-height: 100vh;
   line-height: 1.6;

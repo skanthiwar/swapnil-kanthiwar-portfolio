@@ -1,6 +1,6 @@
 // Nav toggle
 
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const navbarCollapse = document.getElementById("navbarNav");
     const navbarToggler = document.querySelector(".navbar-toggler");
     const navLinks = document.querySelectorAll(".swapnil-header .nav-link");
@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
 
 // Featured Project
 const modals = [
