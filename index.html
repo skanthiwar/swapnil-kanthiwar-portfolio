@@ -361,20 +361,6 @@
   greeting.textContent = text;
 </script>
 
-<script>
-  window.addEventListener('mousemove', (e) => {
-    const trail = document.createElement('div');
-    trail.className = 'cursor-trail';
-    trail.style.top = `${e.clientY}px`;
-    trail.style.left = `${e.clientX}px`;
-    document.body.appendChild(trail);
-
-    // Remove after animation completes
-    setTimeout(() => {
-      trail.remove();
-    }, 600); // match CSS animation duration
-  });
-</script>
 
 
 <div class="live-clock" id="live-clock"></div>

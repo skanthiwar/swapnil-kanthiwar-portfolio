@@ -51,6 +51,20 @@
     });
   });
 
+  // Global cursor trail effect
+console.log("🔥 script.js is loaded");
+  window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('mousemove', (e) => {
+      const trail = document.createElement('div');
+      trail.className = 'cursor-trail';
+      trail.style.top = `${e.clientY}px`;
+      trail.style.left = `${e.clientX}px`;
+      document.body.appendChild(trail);
+      setTimeout(() => trail.remove(), 600);
+    });
+  });
+
+
 // Featured Project
 const modals = [
     { trigger: ".popup-trigger-1", popup: "#popup-project-1", close: ".popup-close-1" },
