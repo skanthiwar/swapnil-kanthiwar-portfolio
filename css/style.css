@@ -1953,7 +1953,6 @@ body {
 /* Contact Page */
 
 /* Contact Section */
-
 #contact {
   max-width: 720px;
   margin: 40px auto 60px;
@@ -1988,53 +1987,6 @@ body {
   text-shadow: 0 1px 2px rgba(0,0,0,0.38);
   /* display: none; */
 }
-
-/* Contact Form */
-
-.contact-form-wrapper {
-  background: rgba(255,255,255,0.10);
-  border-radius: 12px;
-  padding: 2rem 1.2rem;
-  box-shadow: 0 2px 8px #00ffd533;
-  backdrop-filter: blur(6px);
-  max-width: 520px;
-  margin: 0 auto 38px;
-  text-align: left;
-  border: 1.8px solid #00ffd5;
-}
-
-.contact-form-wrapper h2 {
-  color: #00ffd5;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 1px 2px #00ffd522;
-  font-weight: 700;
-}
-
-.form-description {
-  font-weight: 500;
-  font-size: 1rem;
-  color: #e0f7fa;
-  margin-bottom: 1.2rem;
-}
-
-.form-iframe-container {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 1px 4px #00ffd522;
-  background: #0f2027;
-  border: 1.8px solid #00ffd5;
-  /* Optionally add a subtle gradient for extra effect */
-  /* background: linear-gradient(135deg, #0f2027 60%, #203a43 100%); */
-}
-.form-iframe-container iframe {
-  display: block;
-  width: 100%;
-  min-height: 900px;
-  border: none;
-  background: transparent;
-}
-  
 
 /* Contact Details Section */
 
