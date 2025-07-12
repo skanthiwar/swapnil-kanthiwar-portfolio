@@ -330,91 +330,56 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* === Hide System Cursor === */
+/* === Hide Default Cursor === */
 body, a, button, input, textarea, select {
   cursor: none !important;
 }
 
-/* === Neon Ring Cursor === */
-.custom-cursor-ring {
+/* === Modern Dot Cursor === */
+.cursor-dot {
   position: fixed;
   top: 0;
   left: 0;
-  width: 26px;
-  height: 26px;
-  border: 2px solid #00ffd5;
+  width: 8px;
+  height: 8px;
+  background-color: #00fff0;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 999999;
+  z-index: 10000;
   transform: translate(-50%, -50%);
   transition: transform 0.08s ease-out;
-  background-color: rgba(0, 255, 213, 0.05);
-  box-shadow:
-    0 0 8px rgba(0, 255, 213, 0.6),
-    0 0 14px rgba(0, 255, 213, 0.4),
-    0 0 20px rgba(0, 255, 213, 0.2);
-  animation: ring-pulse 1.2s infinite ease-in-out alternate;
-  mix-blend-mode: screen;
+  mix-blend-mode: difference;
 }
 
-/* === Matching Neon Glow Trail === */
+/* === Glow Trail Effect === */
 .cursor-trail {
   position: fixed;
   top: 0;
   left: 0;
-  width: 26px;
-  height: 26px;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #00fff0 40%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 999998;
-  background: radial-gradient(circle, #00ffd5 20%, rgba(0, 255, 213, 0.05) 70%);
-  opacity: 0.7;
+  z-index: 9999;
   transform: translate(-50%, -50%);
-  animation: trail-fade 1s ease-out forwards;
-  filter: blur(1.8px);
-  will-change: transform, opacity;
+  animation: trailFade 0.8s ease-out forwards;
+  opacity: 0.6;
+  filter: blur(2px);
 }
 
-/* === Glow Trail Fade Animation === */
-@keyframes trail-fade {
+/* === Trail Fade Animation === */
+@keyframes trailFade {
   0% {
+    opacity: 0.6;
     transform: scale(1);
-    opacity: 0.7;
-    filter: blur(1.5px);
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 0.35;
-    filter: blur(2.2px);
   }
   100% {
-    transform: scale(1.5);
     opacity: 0;
-    filter: blur(3px);
+    transform: scale(1.8);
   }
 }
 
-/* === Ring Pulse Animation === */
-@keyframes ring-pulse {
-  0% {
-    box-shadow:
-      0 0 8px rgba(0, 255, 213, 0.6),
-      0 0 14px rgba(0, 255, 213, 0.4);
-  }
-  100% {
-    box-shadow:
-      0 0 12px rgba(0, 255, 213, 0.8),
-      0 0 24px rgba(0, 255, 213, 0.6);
-  }
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 3rem 1rem;
-  position: relative;
-}
 
 /* ==== Section Titles ==== */
 .section-title {

@@ -54,41 +54,24 @@
   // Global cursor trail effect
 console.log("🔥 script.js is loaded");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const ring = document.createElement("div");
-  ring.className = "custom-cursor-ring";
-  document.body.appendChild(ring);
+  document.addEventListener("DOMContentLoaded", () => {
+    const dot = document.createElement("div");
+    dot.className = "cursor-dot";
+    document.body.appendChild(dot);
 
-  let lastX = 0;
-  let lastY = 0;
-  let lastTime = 0;
+    document.addEventListener("mousemove", (e) => {
+      dot.style.left = `${e.clientX}px`;
+      dot.style.top = `${e.clientY}px`;
 
-  document.addEventListener("mousemove", (e) => {
-    const { clientX: x, clientY: y } = e;
-    const now = Date.now();
+      const trail = document.createElement("div");
+      trail.className = "cursor-trail";
+      trail.style.left = `${e.clientX}px`;
+      trail.style.top = `${e.clientY}px`;
+      document.body.appendChild(trail);
 
-    // Move the ring
-    ring.style.transform = `translate(${x}px, ${y}px)`;
-
-    // Throttle trail creation for smoother motion
-    if (now - lastTime < 10) return;
-    lastTime = now;
-
-    const dist = Math.hypot(x - lastX, y - lastY);
-    if (dist < 4) return;
-    lastX = x;
-    lastY = y;
-
-    // Create and animate trail
-    const trail = document.createElement("div");
-    trail.className = "cursor-trail";
-    trail.style.left = `${x}px`;
-    trail.style.top = `${y}px`;
-    document.body.appendChild(trail);
-
-    setTimeout(() => trail.remove(), 1000); // match animation duration
+      setTimeout(() => trail.remove(), 800);
+    });
   });
-});
 
 // Featured Project
 const modals = [
